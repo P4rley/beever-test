@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { favQuote, fetchQuote } from "../store/actions/quoteAction";
+import "./KanyeQuoteView.css";
 
 export default function KanyeQuoteView() {
   const dispatch = useDispatch();
@@ -30,8 +31,12 @@ export default function KanyeQuoteView() {
         {quote ? quote : "Kanye-West Quote"}
       </h1>
 
-      <button onClick={generateQuote}>Get Quote</button>
-      <button onClick={handleFavQuote}>Add Favorite</button>
+      <button onClick={generateQuote} className="get-quote">
+        Get Quote
+      </button>
+      <button onClick={handleFavQuote} className="add-quote">
+        Add Favorite
+      </button>
       {fav.map((el, i) => {
         return <p key={i}>{el}</p>;
       })}

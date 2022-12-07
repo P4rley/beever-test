@@ -1,0 +1,17 @@
+.get-quote,
+.add-quote {
+  color: #fff;
+  border: 1px solid #222;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  background-color: #222;
+  border-radius: 40px;
+  transition: all 0.4s ease-in-out;
+  margin: 1rem;
+}
+
+.get-quote:hover,
+.add-quote:hover {
+  background-color: #fff;
+  color: #222;
+}
