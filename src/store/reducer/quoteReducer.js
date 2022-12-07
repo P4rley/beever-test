@@ -1,6 +1,6 @@
 import { GET_QUOTE, FAV_QUOTE, ADD_QUOTE } from "../actionType";
 
-const initialState = { quote: "", fav: "", myQuote: "" };
+const initialState = { quote: "", fav: [], myQuote: [] };
 
 export default function quoteReducer(state = initialState, action) {
   switch (action.type) {

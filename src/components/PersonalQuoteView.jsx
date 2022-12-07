@@ -26,7 +26,9 @@ export default function PersonalQuoteView() {
         <input type="text" value={quote} onChange={handleQuote} />
         <button type="submit">Submit</button>
       </form>
-      <p>{myQuote}</p>
+      {myQuote.map((el, i) => {
+        return <p key={i}>{el}</p>;
+      })}
     </section>
   );
 }

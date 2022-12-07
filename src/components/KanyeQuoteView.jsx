@@ -9,7 +9,7 @@ export default function KanyeQuoteView() {
 
   useEffect(() => {
     dispatch(fetchQuote());
-  }, []);
+  }, [dispatch]);
 
   const generateQuote = () => {
     dispatch(fetchQuote());
@@ -32,7 +32,9 @@ export default function KanyeQuoteView() {
 
       <button onClick={generateQuote}>Get Quote</button>
       <button onClick={handleFavQuote}>Add Favorite</button>
-      <p>{fav}</p>
+      {fav.map((el, i) => {
+        return <p key={i}>{el}</p>;
+      })}
     </section>
   );
 }
