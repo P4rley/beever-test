@@ -42,7 +42,9 @@ export const addQuote = (payload) => {
       const state = getState();
       const { myQuote } = state.quoteReducer;
 
-      if (!myQuote.includes(payload)) {
+      if (
+        !myQuote.map((el) => el.toLowerCase()).includes(payload.toLowerCase())
+      ) {
         myQuote.push(payload);
 
         dispatch({
